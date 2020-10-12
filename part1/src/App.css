@@ -1,0 +1,141 @@
+.main {
+  text-align: center;
+}
+
+.header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+}
+
+.logo > img {
+  height: 160px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo > img {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  margin: 0;
+}
+
+.navigation > ul > li {
+  padding: 5px;
+}
+
+.navigation > ul > li:hover {
+  background: #282c34;
+}
+
+.navigation > ul > li + li {
+  margin-left: 20px;
+}
+
+.navigation > ul > li > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.intro {
+  background: #e2e2e2;
+}
+
+.intro > p {
+  margin: 0;
+  padding: 40px;
+}
+
+.characters {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter {
+  padding: 20px;
+}
+
+.filter > label {
+  font-size: 16px;
+}
+
+.filter select {
+  font-size: 16px;
+  padding: 10px 5px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #e2e2e2;
+  width: 18%;
+  margin: 1%;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card > h3 {
+  padding: 20px;
+}
+
+.footer {
+  background-color: #282c34;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer > div {
+  width: 50%;
+}
+
+.footer .links > ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer .links > ul > li {
+  margin-right: 20px;
+}
+
+.footer .links > ul > li a {
+  color: #ffffff;
+}

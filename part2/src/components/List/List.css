@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #e2e2e2;
+  width: 18%;
+  margin: 1%;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card > h3 {
+  padding: 20px;
+}
