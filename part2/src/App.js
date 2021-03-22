@@ -2,8 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-// import Characters from './components/Characters/Characters';
-import Characters from './components/Characters/CharactersClass';
+import Characters from './components/Characters/Characters';
 
 function App() {
   return (

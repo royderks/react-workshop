@@ -8,10 +8,10 @@ export default function Characters() {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    async function getCharacters() {
-      const data = await fetch('https://rickandmortyapi.com/api/character');
-
-      data.json().then((data) => {
+    function getCharacters() {
+      fetch('https://rickandmortyapi.com/api/character')
+        .then((result) => result.json())
+        .then((data) => {
         if (filter) {
           return setCharacters(
             data.results.filter((result) => result.species === filter),
