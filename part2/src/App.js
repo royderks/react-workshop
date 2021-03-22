@@ -29,7 +29,8 @@ function App() {
       </div>
       <Router>
         <Switch>
-          <Route path="/" component={Characters} />
+        <Route path="/characters" component={Characters} />
+        <Route path="/" component={Characters} />
         </Switch>
       </Router>
 
