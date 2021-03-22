@@ -8,12 +8,9 @@ function App() {
 
   useEffect(() => {
     async function getCharacters() {
-      const data = fetch('https://rickandmortyapi.com/api/character').then(result => result.json()).then(json => // do something with )
-
-      const json = data.json();
-      // do something with the output
-
-      data.json().then((data) => {
+      const data = fetch('https://rickandmortyapi.com/api/character')
+        .then((result) => result.json())
+        .then((data) => {
         if (filter) {
           return setCharacters(
             data.results.filter((result) => result.species === filter),
