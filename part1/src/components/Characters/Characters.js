@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Filter from '../Filter/Filter';
 import './Characters.css';
 
 function Characters() {
@@ -25,19 +26,7 @@ function Characters() {
 
   return (
     <div className='characters'>
-      <div className='filter'>
-        <label>
-          Filter by species:&nbsp;
-          <select
-            selected={filter}
-            onChange={(event) => setFilter(event.target.value)}
-          >
-            <option value=''>All species</option>
-            <option value='Alien'>Alien</option>
-            <option value='Human'>Human</option>
-          </select>
-        </label>
-      </div>
+      <Filter filter={filter} setFilter={setFilter} />
       <div className='list'>
         {characters.length &&
           characters.map((character) => (
