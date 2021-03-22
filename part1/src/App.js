@@ -7,7 +7,7 @@ function App() {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    async function getCharacters() {
+    function getCharacters() {
       const data = fetch('https://rickandmortyapi.com/api/character')
         .then((result) => result.json())
         .then((data) => {
