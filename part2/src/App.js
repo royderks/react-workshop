@@ -11,7 +11,6 @@ import Characters from './components/Characters/Characters';
 function App() {
   return (
     <Router>
-      {' '}
       {/* IMPORTANT ROUTER MUST WRAP ENTIRE COMPONENT */}
       <div className='main'>
         <Header />
@@ -35,7 +34,8 @@ function App() {
         <Switch>
           <Route path='/characters/:characterId' component={Character} />
           <Route path='/characters' component={Characters} />
-          <Route path='/' component={Characters} />
+          <Route exact path='/' component={Characters} />
+          <Route path='*' render={() => <h1>404</h1>} />
         </Switch>
 
         <Footer />
