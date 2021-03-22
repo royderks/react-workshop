@@ -2,29 +2,10 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
+import Characters from './components/Characters/Characters';
+import Footer from './components/Footer/Footer';
 
 function App() {
-  const [characters, setCharacters] = useState([]);
-  const [filter, setFilter] = useState('');
-
-  useEffect(() => {
-    function getCharacters() {
-      fetch('https://rickandmortyapi.com/api/character')
-        .then((result) => result.json())
-        .then((data) => {
-        if (filter) {
-          return setCharacters(
-            data.results.filter((result) => result.species === filter),
-          );
-        }
-
-        return setCharacters(data.results);
-      });
-    }
-
-    getCharacters();
-  }, [filter]);
-
   return (
     <div className='main'>
       <Header />
@@ -44,49 +25,8 @@ function App() {
           canonical information as seen on the TV show.
         </p>
       </div>
-      <div className='characters'>
-        <div className='filter'>
-          <label>
-            Filter by species:&nbsp;
-            <select
-              selected={filter}
-              onChange={(event) => setFilter(event.target.value)}
-            >
-              <option value=''>All species</option>
-              <option value='Alien'>Alien</option>
-              <option value='Human'>Human</option>
-            </select>
-          </label>
-        </div>
-        <div className='list'>
-          {characters.length &&
-            characters.map((character) => (
-              <div className='card'>
-                <img src={character.image} alt={character.name} />
-                <h3>
-                  {character.name} ({character.species})
-                </h3>
-              </div>
-            ))}
-        </div>
-      </div>
-      <footer className='footer'>
-        <div className='about'>
-          <p>
-            This page was created as part of the React Workshop &copy; Roy Derks
-          </p>
-        </div>
-        <div className='links'>
-          <ul>
-            <li>
-              <a href='#'>Link #1</a>
-            </li>
-            <li>
-              <a href='#'>Link #2</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <Characters />
+      <Footer />
     </div>
   );
 }
