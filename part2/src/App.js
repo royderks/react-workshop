@@ -5,11 +5,14 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Character from './components/Character/Character';
 import Characters from './components/Characters/Characters';
 
 function App() {
   return (
-    <Router> {/* IMPORTANT ROUTER MUST WRAP ENTIRE COMPONENT */}
+    <Router>
+      {' '}
+      {/* IMPORTANT ROUTER MUST WRAP ENTIRE COMPONENT */}
       <div className='main'>
         <Header />
         <div className='intro'>
@@ -30,6 +33,7 @@ function App() {
         </div>
 
         <Switch>
+          <Route path='/characters/:characterId' component={Character} />
           <Route path='/characters' component={Characters} />
           <Route path='/' component={Characters} />
         </Switch>
