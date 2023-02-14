@@ -1,5 +1,3 @@
-import './Footer.css';
-
 export default function Footer() {
   return (
     <footer className='footer'>
@@ -11,10 +9,10 @@ export default function Footer() {
       <div className='links'>
         <ul>
           <li>
-            <a href='#'>Link #1</a>
+            <a href='/#'>Link #1</a>
           </li>
           <li>
-            <a href='#'>Link #2</a>
+            <a href='/#'>Link #2</a>
           </li>
         </ul>
       </div>

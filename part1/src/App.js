@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 import './App.css';
 
 function App() {
@@ -8,7 +10,7 @@ function App() {
 
   useEffect(() => {
     function getCharacters() {
-      const data = fetch('https://rickandmortyapi.com/api/character')
+      fetch('https://rickandmortyapi.com/api/character')
         .then((result) => result.json())
         .then((data) => {
           if (filter) {
@@ -26,22 +28,7 @@ function App() {
 
   return (
     <div className='main'>
-      <header className='header'>
-        <div className='logo'>
-          <img src={logo} alt='logo' />
-          <h1>React Workshop</h1>
-        </div>
-        <div className='navigation'>
-          <ul>
-            <li>
-              <a href='/#'>Link #1</a>
-            </li>
-            <li>
-              <a href='/#'>Link #2</a>
-            </li>
-          </ul>
-        </div>
-      </header>
+      <Header />
       <div className='intro'>
         <p>
           The code for this workshop uses the{' '}
@@ -84,23 +71,7 @@ function App() {
             ))}
         </div>
       </div>
-      <footer className='footer'>
-        <div className='about'>
-          <p>
-            This page was created as part of the React Workshop &copy; Roy Derks
-          </p>
-        </div>
-        <div className='links'>
-          <ul>
-            <li>
-              <a href='#'>Link #1</a>
-            </li>
-            <li>
-              <a href='#'>Link #2</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
