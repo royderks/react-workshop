@@ -1,5 +1,6 @@
 import logo from '../logo.svg';
 import './Header.css';
+import Navigation from './Navigation';
 
 export default function Header() {
   return (
@@ -8,16 +9,12 @@ export default function Header() {
         <img src={logo} alt='logo' />
         <h1>React Workshop</h1>
       </div>
-      <div className='navigation'>
-        <ul>
-          <li>
-            <a href='/#'>Link #1</a>
-          </li>
-          <li>
-            <a href='/#'>Link #2</a>
-          </li>
-        </ul>
-      </div>
+      <Navigation
+        links={[
+          { href: '/#', label: 'Link #1' },
+          { href: '/#', label: 'Link #2' },
+        ]}
+      />
     </header>
   );
 }
