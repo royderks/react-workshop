@@ -5,10 +5,12 @@ import './index.css';
 import App from './App';
 import Characters from './components/Characters/Characters';
 import Character from './components/Character/Character';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
