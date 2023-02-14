@@ -1,5 +1,4 @@
-import React from 'react';
-import './Filter.css'
+import './Filter.css';
 
 export default function Filter({ filter, setFilter }) {
   return (

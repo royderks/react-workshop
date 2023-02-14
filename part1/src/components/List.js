@@ -1,5 +1,4 @@
-import React from 'react';
-import './List.css'
+import './List.css';
 
 export default function List({ characters }) {
   return (
