@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Characters from './components/Characters/Characters';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           canonical information as seen on the TV show.
         </p>
       </div>
-      <Characters />
+      <Outlet />
       <Footer />
     </div>
   );

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 export default function Navigation() {
@@ -5,7 +6,7 @@ export default function Navigation() {
     <div className='navigation'>
       <ul>
         <li>
-          <a href='/#'>Link #1</a>
+          <Link to='/characters'>Characters</Link>
         </li>
         <li>
           <a href='/#'>Link #2</a>
