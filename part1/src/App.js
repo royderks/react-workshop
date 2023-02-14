@@ -11,14 +11,14 @@ function App() {
       const data = fetch('https://rickandmortyapi.com/api/character')
         .then((result) => result.json())
         .then((data) => {
-        if (filter) {
-          return setCharacters(
-            data.results.filter((result) => result.species === filter),
-          );
-        }
+          if (filter) {
+            return setCharacters(
+              data.results.filter((result) => result.species === filter),
+            );
+          }
 
-        return setCharacters(data.results);
-      });
+          return setCharacters(data.results);
+        });
     }
 
     getCharacters();
@@ -34,10 +34,10 @@ function App() {
         <div className='navigation'>
           <ul>
             <li>
-              <a href='#'>Link #1</a>
+              <a href='/#'>Link #1</a>
             </li>
             <li>
-              <a href='#'>Link #2</a>
+              <a href='/#'>Link #2</a>
             </li>
           </ul>
         </div>
