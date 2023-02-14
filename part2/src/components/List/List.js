@@ -1,4 +1,5 @@
-import './List.css'
+import { Link } from 'react-router-dom';
+import './List.css';
 
 export default function List({ characters }) {
   return (
@@ -6,10 +7,12 @@ export default function List({ characters }) {
       {characters.length &&
         characters.map((character) => (
           <div className='card'>
-            <img src={character.image} alt={character.name} />
-            <h3>
-              {character.name} ({character.species})
-            </h3>
+            <Link to={`/characters/${character.id}`} key={character.id}>
+              <img src={character.image} alt={character.name} />
+              <h3>
+                {character.name} ({character.species})
+              </h3>
+            </Link>
           </div>
         ))}
     </div>
