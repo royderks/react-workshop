@@ -7,7 +7,7 @@ This workshop consists of two parts.
 Go into either the directory `part1` or `part2` and run the following"
 
 ```
-yarn && yarn start
+npm i && npm start
 ```
 
 ### Exercises
